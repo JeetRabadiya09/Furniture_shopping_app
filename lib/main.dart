@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:furniture_shopping_app/utils/Routes/app_routes.dart';
+import 'package:furniture_shopping_app/utils/Routes/routes_name.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 Future<void> main() async {
@@ -18,9 +20,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: "Poppins",
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      getPages: AppRoutes.getPages,
+      initialRoute: RoutesName.boarding,
     );
   }
 }

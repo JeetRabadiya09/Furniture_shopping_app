@@ -2,6 +2,9 @@ class AppAssets {
   // Log in
   static const String backround = "assets/images/backround.png";
   static const String sofa = "assets/images/sofa.png";
+  static const String product = "assets/images/product.png";
+  static const String star = "assets/images/star.jpg";
+  static const String saved = "assets/images/saved.png";
 
   // Home
   // static const String imagedrawer = "assets/images/drawer.png";

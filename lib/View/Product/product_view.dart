@@ -22,79 +22,68 @@ class ProductView extends StatelessWidget {
                 AppAssets.product,
               ),
               Padding(
-                padding: EdgeInsets.only(
-                    top: screenWidth / 10, left: screenWidth / 20),
+                padding: const EdgeInsets.only(top: 50, left: 30),
                 child: Container(
-                  height: screenHeight / 18,
-                  width: screenWidth / 8,
+                  height: 40,
+                  width: 40,
                   decoration: BoxDecoration(
                     color: AppColors.white,
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(5),
                     boxShadow: const [
                       BoxShadow(
                         color: AppColors.lightGrey,
                         offset: Offset(1.4, 1.4),
-                        blurRadius: 10,
-                        spreadRadius: 2,
+                        blurRadius: 15,
+                        spreadRadius: 1.5,
                       ),
                     ],
                   ),
-                  child: IconButton(
+                  child: BackButton(
                     onPressed: () {},
-                    icon: const Icon(Icons.arrow_back_ios),
                   ),
                 ),
               )
             ],
           ),
           Padding(
-            padding:
-                EdgeInsets.only(top: screenWidth / 90, left: screenWidth / 30),
+            padding: EdgeInsets.only(
+                right: screenWidth / 20, left: screenWidth / 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: EdgeInsets.all(screenWidth / 40),
-                  child: const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      textAlign: TextAlign.start,
-                      AppStrings.minimalStand,
-                      style: TextStyle(
-                        color: AppColors.lb,
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                const Text(
+                  textAlign: TextAlign.start,
+                  AppStrings.minimalStand,
+                  style: TextStyle(
+                    color: AppColors.black,
+                    fontSize: 21,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                SizedBox(width: screenWidth / 60),
+                const Text(
+                  textAlign: TextAlign.start,
+                  AppStrings.rupee,
+                  style: TextStyle(
+                    color: AppColors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
                 Row(
                   children: [
-                    SizedBox(width: screenWidth / 40),
-                    const Text(
-                      textAlign: TextAlign.start,
-                      AppStrings.rupee,
-                      style: TextStyle(
-                        color: AppColors.lb,
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
                     Image.asset(
-                      AppAssets.starProduct,
-                      height: screenHeight / 30,
-                      width: screenWidth / 10,
+                      AppAssets.star,
+                      height: 20,
+                      width: 20,
                     ),
+                    SizedBox(width: screenWidth / 50),
                     const Text(
                       textAlign: TextAlign.start,
                       ("4.5"),
                       style: TextStyle(
-                        color: AppColors.lb,
-                        fontSize: 24,
+                        color: AppColors.black,
+                        fontSize: 18,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -103,7 +92,7 @@ class ProductView extends StatelessWidget {
                       textAlign: TextAlign.start,
                       ("(50 reviews)"),
                       style: TextStyle(
-                        color: AppColors.greyL,
+                        color: AppColors.gray,
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
                       ),
@@ -113,14 +102,14 @@ class ProductView extends StatelessWidget {
                 SizedBox(height: screenHeight / 100),
                 const Text(
                   textAlign: TextAlign.start,
-                  ("Minimal Stand is made of by natural wood. The \n design that is very simple and minimal. This is\n truly one of the best furnitures in any family for\n now. With 3 different colors, you can easily\n select the best match for your home. "),
+                  ("Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. "),
                   style: TextStyle(
                     color: AppColors.gray,
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(height: screenHeight / 100),
+                SizedBox(height: screenHeight / 40),
                 Row(
                   children: [
                     Container(
@@ -128,21 +117,21 @@ class ProductView extends StatelessWidget {
                       width: screenWidth / 8,
                       decoration: BoxDecoration(
                         color: AppColors.lightgrey2,
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(8),
                       ),
                       child: Padding(
                         padding: EdgeInsets.all(screenWidth / 40),
                         child: Image.asset(
-                          AppAssets.marker,
+                          AppAssets.saved,
                           color: AppColors.gray,
                         ),
                       ),
                     ),
-                    SizedBox(width: screenWidth / 10),
+                    SizedBox(width: screenWidth / 15),
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor:
-                            const MaterialStatePropertyAll(AppColors.lb),
+                            const MaterialStatePropertyAll(AppColors.black),
                         fixedSize: MaterialStatePropertyAll(
                           Size(screenWidth / 1.5, screenHeight / 20),
                         ),

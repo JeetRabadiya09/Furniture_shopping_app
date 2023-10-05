@@ -1,6 +1,7 @@
 class AppAssets {
   // Log in
   static const String backround = "assets/images/backround.png";
+  static const String sofa = "assets/images/sofa.png";
 
   // Home
   // static const String imagedrawer = "assets/images/drawer.png";

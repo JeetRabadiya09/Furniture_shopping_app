@@ -1,8 +1,10 @@
-import 'package:furniture_shopping_app/View/Login/log_in.dart';
+import 'package:furniture_shopping_app/View/Login/log_in_view.dart';
+import 'package:furniture_shopping_app/View/Sign_up/sign_up_view.dart';
 import 'package:furniture_shopping_app/utils/Routes/routes_name.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import '../../View/Login/boarding.dart';
+import '../../View/Product/product_view.dart';
 
 class AppRoutes {
   static List<GetPage<dynamic>>? getPages = [
@@ -14,6 +16,16 @@ class AppRoutes {
     GetPage(
       name: RoutesName.loginView,
       page: () => const LoginView(),
+      // binding: HomeBindings(),
+    ),
+    GetPage(
+      name: RoutesName.signupView,
+      page: () => const SignUpView(),
+      // binding: HomeBindings(),
+    ),
+    GetPage(
+      name: RoutesName.productView,
+      page: () => const ProductView(),
       // binding: HomeBindings(),
     ),
   ];

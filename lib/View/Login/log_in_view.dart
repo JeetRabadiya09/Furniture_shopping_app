@@ -95,46 +95,73 @@ class LoginView extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  top: screenWidth / 40,
-                                  left: screenWidth / 20),
-                              child: const Text(
-                                "Email",
-                                style: TextStyle(
-                                  color: AppColors.grey2,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ),
+                            // Padding(
+                            //   padding: EdgeInsets.only(
+                            //       top: screenWidth / 40,
+                            //       left: screenWidth / 20),
+                            //   child: const Text(
+                            //     "Email",
+                            //     style: TextStyle(
+                            //       color: AppColors.grey2,
+                            //       fontSize: 16,
+                            //       fontWeight: FontWeight.w400,
+                            //     ),
+                            //   ),
+                            // ),
                             Padding(
                               padding: EdgeInsets.only(
                                   left: screenWidth / 20,
                                   top: screenWidth / 80),
                               child: TextFormField(
-                                // controller: emailcontroller,
-                                validator: (value) {
-                                  if (!RegExp(
-                                          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                                      .hasMatch(value!)) {
-                                    return "Enter email id ";
-                                  }
-                                  return null;
-                                },
-                                decoration: const InputDecoration(
-                                  border: InputBorder.none,
-                                  isDense: true,
-                                  hintText: "Enter email ",
-                                  contentPadding: EdgeInsets.all(12),
-                                  hintStyle: TextStyle(
-                                      color: Color(0xFFB3B3B3),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400,
-                                      fontFamily: "Poppins"),
+                                decoration: InputDecoration(
+                                  labelText: 'Name',
+                                  labelStyle: TextStyle(
+                                    color: AppColors.grey2,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  hintText: '0.0',
+                                  floatingLabelBehavior:
+                                      FloatingLabelBehavior.always,
                                 ),
-                                onTap: () {},
                               ),
+                              // TextFormField(
+                              //   // controller: emailcontroller,
+                              //   validator: (value) {
+                              //     if (!RegExp(
+                              //             r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                              //         .hasMatch(value!)) {
+                              //       return "Enter email id ";
+                              //     }
+                              //     return null;
+                              //   },
+                              //   decoration: const InputDecoration(
+                              //     border: InputBorder.none,
+                              //     isDense: true,
+                              //     hintText: "Enter email ",
+                              //     contentPadding: EdgeInsets.all(12),
+                              //     hintStyle: TextStyle(
+                              //         color: Color(0xFFB3B3B3),
+                              //         fontSize: 16,
+                              //         fontWeight: FontWeight.w400,
+                              //         fontFamily: "Poppins"),
+                              //   ),
+                              //   onTap: () {},
+                              // ),
+                              // TextField(
+                              //     // controller: username,
+                              //     decoration: InputDecoration(
+                              //   labelText: "Username", //babel text
+                              //   hintText: "Enter your email", //hint text
+                              //   prefixIcon: Icon(Icons.people), //prefix iocn
+                              //   hintStyle: TextStyle(
+                              //       fontSize: 18,
+                              //       fontWeight:
+                              //           FontWeight.bold), //hint text style
+                              //   labelStyle: TextStyle(
+                              //       fontSize: 13,
+                              //       color: Colors.redAccent), //label style
+                              // )),
                             ),
                           ],
                         ),
@@ -211,8 +238,11 @@ class LoginView extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(
                             left: screenWidth / 30, right: screenWidth / 30),
-                        child: const AppButton(
+                        child: AppButton(
                           elevated: "Log in",
+                          onPress: () {
+                            Get.offNamed(RoutesName.homeView);
+                          },
                         ),
                       ),
                       TextButton(

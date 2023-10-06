@@ -1,3 +1,4 @@
+import 'package:furniture_shopping_app/View/Home/home_view.dart';
 import 'package:furniture_shopping_app/View/Login/log_in_view.dart';
 import 'package:furniture_shopping_app/View/Sign_up/sign_up_view.dart';
 import 'package:furniture_shopping_app/utils/Routes/routes_name.dart';
@@ -21,6 +22,11 @@ class AppRoutes {
     GetPage(
       name: RoutesName.signupView,
       page: () => const SignUpView(),
+      // binding: HomeBindings(),
+    ),
+    GetPage(
+      name: RoutesName.homeView,
+      page: () => const HomeView(),
       // binding: HomeBindings(),
     ),
     GetPage(

@@ -1,7 +1,9 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
 import 'package:furniture_shopping_app/res/constant/app_strings.dart';
+import 'package:onboarding_animation/onboarding_animation.dart';
 
 class ProductView extends StatelessWidget {
   const ProductView({super.key});
@@ -16,34 +18,80 @@ class ProductView extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Stack(
-            children: [
-              Image.asset(
-                AppAssets.product,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 50, left: 30),
-                child: Container(
-                  height: 40,
-                  width: 40,
-                  decoration: BoxDecoration(
-                    color: AppColors.white,
-                    borderRadius: BorderRadius.circular(5),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: AppColors.lightGrey,
-                        offset: Offset(1.4, 1.4),
-                        blurRadius: 15,
-                        spreadRadius: 1.5,
-                      ),
-                    ],
-                  ),
-                  child: BackButton(
-                    onPressed: () {},
+          Expanded(
+            child: Stack(
+              children: [
+                OnBoardingAnimation(
+                  pages: [
+                    Image.asset(
+                      alignment: Alignment.centerRight,
+                      AppAssets.product,
+                      // width: 325,
+                      // height: 200,
+                      cacheHeight: 470, cacheWidth: 320,
+                    ),
+                    Image.asset(
+                      cacheHeight: 470, cacheWidth: 320,
+                      alignment: Alignment.centerRight,
+                      AppAssets.product,
+                      // width: 325,
+                      // height: 455,
+                    ),
+                    Image.asset(
+                      alignment: Alignment.centerRight,
+                      AppAssets.product,
+                      // width: 325,
+                      cacheHeight: 470, cacheWidth: 320,
+                      // height: 455,
+                    ),
+                  ],
+                  // indicatorSwapType: SwapType.normal,
+                  // indicatorDotHeight: 7.0,
+                  // indicatorDotWidth: 7.0,
+                  // indicatorActiveDotColor: AppColors.black,
+                  // indicatorType: IndicatorType.expandingDots,
+                  // indicatorPosition: IndicatorPosition.bottomRight,
+                ),
+                DotsIndicator(
+                  dotsCount: 3,
+                  position: ,
+                ),
+
+                // Image.asset(
+                //   AppAssets.product,
+                // ),
+                Positioned(
+                  top: 50,
+                  left: 20,
+                  child: Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                      color: AppColors.white,
+                      borderRadius: BorderRadius.circular(5),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: AppColors.lightGrey,
+                          offset: Offset(1.4, 1.4),
+                          blurRadius: 15,
+                          spreadRadius: 1.5,
+                        ),
+                      ],
+                    ),
+                    child: BackButton(
+                      onPressed: () {},
+                    ),
                   ),
                 ),
-              )
-            ],
+                Positioned(
+                    top: 150,
+                    child: Image.asset(
+                      AppAssets.color,
+                      // height: 192,
+                      width: 110,
+                    ))
+              ],
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(

@@ -1,3 +1,4 @@
+import 'package:furniture_shopping_app/View/Favorite/favorite_view.dart';
 import 'package:furniture_shopping_app/View/Home/home_view.dart';
 import 'package:furniture_shopping_app/View/Login/log_in_view.dart';
 import 'package:furniture_shopping_app/View/Sign_up/sign_up_view.dart';
@@ -32,6 +33,11 @@ class AppRoutes {
     GetPage(
       name: RoutesName.productView,
       page: () => const ProductView(),
+      // binding: HomeBindings(),
+    ),
+    GetPage(
+      name: RoutesName.favoriteview,
+      page: () => const FavoriteView(),
       // binding: HomeBindings(),
     ),
   ];

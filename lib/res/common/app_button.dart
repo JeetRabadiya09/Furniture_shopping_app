@@ -6,8 +6,8 @@ class AppButton extends StatelessWidget {
   final String? elevated;
   final IconData? icon;
   final double? radius;
-  // final double? width;
-  // final double? height;
+  final double? width;
+  final double? height;
   final void Function()? onPress;
   final String? name;
   const AppButton(
@@ -16,7 +16,9 @@ class AppButton extends StatelessWidget {
       this.elevated,
       this.icon,
       this.radius,
-      this.onPress})
+      this.onPress,
+      this.width,
+      this.height})
       : super(key: key);
 
   @override
@@ -31,8 +33,11 @@ class AppButton extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: const MaterialStatePropertyAll(AppColors.black),
           fixedSize: MaterialStatePropertyAll(
-            Size(screenWidth / 0.1, screenHeight / 16),
+            Size(width!, height!),
           ),
+          // fixedSize: MaterialStatePropertyAll(
+          //   Size(screenWidth / 0.1, screenHeight / 16),
+          // ),
           shape: MaterialStatePropertyAll(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           ),

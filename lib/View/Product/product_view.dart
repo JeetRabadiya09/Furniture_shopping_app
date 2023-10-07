@@ -1,4 +1,3 @@
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
@@ -45,17 +44,17 @@ class ProductView extends StatelessWidget {
                       // height: 455,
                     ),
                   ],
-                  // indicatorSwapType: SwapType.normal,
-                  // indicatorDotHeight: 7.0,
-                  // indicatorDotWidth: 7.0,
-                  // indicatorActiveDotColor: AppColors.black,
-                  // indicatorType: IndicatorType.expandingDots,
-                  // indicatorPosition: IndicatorPosition.bottomRight,
+                  indicatorSwapType: SwapType.normal,
+                  indicatorDotHeight: 7.0,
+                  indicatorDotWidth: 7.0,
+                  indicatorActiveDotColor: AppColors.black,
+                  indicatorType: IndicatorType.expandingDots,
+                  indicatorPosition: IndicatorPosition.bottomRight,
                 ),
-                DotsIndicator(
-                  dotsCount: 3,
-                  position: ,
-                ),
+                // DotsIndicator(
+                //   dotsCount: 3,
+                //   position: ,
+                // ),
 
                 // Image.asset(
                 //   AppAssets.product,

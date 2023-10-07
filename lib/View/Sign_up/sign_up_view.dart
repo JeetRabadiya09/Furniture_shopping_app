@@ -296,12 +296,13 @@ class SignUpView extends StatelessWidget {
                       SizedBox(
                         height: screenHeight / 45,
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            left: screenWidth / 30, right: screenWidth / 30),
-                        child: const AppButton(
-                          elevated: "Sign up ",
-                        ),
+                      AppButton(
+                        height: screenHeight / 15,
+                        width: screenWidth / 1.2,
+                        elevated: "Sign up ",
+                        onPress: () {
+                          Get.toNamed(RoutesName.loginView);
+                        },
                       ),
                       SizedBox(
                         height: screenHeight / 70,

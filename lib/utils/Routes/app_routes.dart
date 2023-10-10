@@ -6,6 +6,7 @@ import 'package:furniture_shopping_app/utils/Routes/routes_name.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import '../../View/Login/boarding.dart';
+import '../../View/MainPage/mainpage.dart';
 import '../../View/Product/product_view.dart';
 
 class AppRoutes {
@@ -38,6 +39,11 @@ class AppRoutes {
     GetPage(
       name: RoutesName.favoriteview,
       page: () => const FavoriteView(),
+      // binding: HomeBindings(),
+    ),
+    GetPage(
+      name: RoutesName.mainpageview,
+      page: () => const MainPageView(),
       // binding: HomeBindings(),
     ),
   ];

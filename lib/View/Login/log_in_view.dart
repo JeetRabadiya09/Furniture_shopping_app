@@ -213,7 +213,7 @@ class LoginView extends StatelessWidget {
                         width: screenWidth / 1.2,
                         elevated: "Log in",
                         onPress: () {
-                          Get.offNamed(RoutesName.homeView);
+                          Get.offNamed(RoutesName.mainpageview);
                         },
                       ),
                       TextButton(
